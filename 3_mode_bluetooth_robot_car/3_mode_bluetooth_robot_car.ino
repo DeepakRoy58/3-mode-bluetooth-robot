@@ -174,7 +174,7 @@ void automatic() {
     }   
     else if (distance < safeDistance) {
       stop();
-      delay(300);
+      delay(200);
       servoScan();
     }
   }
@@ -193,9 +193,9 @@ void servoScan() {
     ultrasonicServo.write(180);
     delay(100);
     findDistance();
-    delay(300);
+    delay(200);
     leftDistance = distance;
-    delay(300);
+    delay(200);
 
     ultrasonicServo.write(90);
     delay(100);
@@ -204,9 +204,9 @@ void servoScan() {
     ultrasonicServo.write(0);
     delay(100);
     findDistance();
-    delay(300);
+    delay(200);
     rightDistance = distance;
-    delay(300);
+    delay(200);
 
     ultrasonicServo.write(90);
     delay(100);
@@ -238,7 +238,7 @@ void safeZone() {
       }
       stopA:
       stop();
-      delay(300);
+      delay(200);
       servoScan();
     } 
     else if ((rightDistance > leftDistance) && (rightDistance > safeDistance)) {
